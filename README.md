@@ -1,28 +1,34 @@
 # Payment_Default_Prediction
 
-Apa problem yang mau diselesaikan dari dataset tsb?
-  Kemungkinan nasabah yang gagal bayar pada pembayaran bulan berikutnya
+Dataset : https://www.kaggle.com/datasets/reverie5/av-janata-hack-payment-default-prediction
 
-Sebagai siapa kalian pada dataset tersebut?
-  Sebagai Data Scientist Kita bertanggung jawab dalam memprediksi nasabah mana saja yang kemungkinan gagal bayar pada pembayaran bulan berikutnya
+## Bussiness Understanding
 
-Apa goal yang mau dicapai?
-  Memprediksi nasabah mana saja yang akan mendapatkan pinjaman dan nasabah mana saja yang kemungkinan akan gagal bayar, mengurangi jumlah nasabah yang gagal bayar.
+**Apa problem yang mau diselesaikan dari dataset**
+> Kemungkinan nasabah yang gagal bayar pada pembayaran bulan berikutnya
 
-Apa Objective yang sesuai dengan goal tsb?
-  Membuat sistem yang dapat mengenali nasabah yang kemungkinan tidak akan gagal bayar di bulan berikutnya
+**Sebagai siapa kalian pada dataset tersebut?**
+> Sebagai Data Scientist pada bagian Credit Analyst
 
-Apa business metrics yang cocok untuk mengukur ketercapaian Objective tsb?
-  Payment Default Rate (menghitung rasio dari nasabah yang kemungkinan gagal bayar di bulan berikutnya)
+**Apa goal yang mau dicapai?**
+> Menurunkan ...
 
+**Apa Objective yang sesuai dengan goal tsb?**
+> Memprediksi user mana saja yang akan default, kemudian memberikan **Treatment** khusus pada user tersebut sehingga diharapkan agar tidak default pada bulan tersebut
 
-*Background
-1. Sebuah bank memiliki angka default rate sebesar 22%  untuk nasabah kartu kredit gagal bayar pada pembayaran bulan berikutnya.
-2. Kegagalan bayar menyebabkan menurunnya keuntungan bank, dan bank harus mengeluarkan cost lebih untuk melakukan penagihan
-3. Kami ingin membuat machine learning yang dapat memprediksi nasabah mana yang akan gagal bayar pada pembayaran bulan berikutnya
-4. Goals kami adalah menurunkan default rate dikisaran 5% - 10% agar keuntungan bank meningkat dan cost untuk melakukan penagihan dapat dikurangi
+**Apa business metrics yang cocok untuk mengukur ketercapaian Objective tsb?**
+> ...
 
-*Hasil Pengamatan EDA
+## Latar Belakang
+1.  Sebuah bank memiliki angka default rate sebesar 22%  untuk nasabah kartu kredit gagal bayar pada pembayaran bulan berikutnya.
+2.  Kegagalan bayar menyebabkan menurunnya keuntungan bank, dan bank harus mengeluarkan cost extra untuk melakukan penagihan kepada user yang terprediksi default
+3.  Kami ingin membuat model yang handal dalam memprediksi user mana yang akan gagal bayar pada pembayaran bulan berikutnya, sehingga akan dilakukan **Treatment** khusus pada user-user tersebut
+4.  Goals dari Model kami yaitu: 
+- meminimalkan cost yang terbuang percuma dengan cara menurunkan metrics **Precision**
+- memaksimalkan penggunaan cost sehingga pemberian **Treatment** lebih tepat sasaran kepada user yang "membutuhkan" dengan cara menurunkan metrics **Recall**
+5.  Goals dari Bussiness kami adalah ...
+
+## Hasil Pengamatan EDA
 1. Terdapat outlier pada semua kolom bill amt dan pay amt dan datanya memiliki kerapatan yang cukup rapat
 2. Distribusi data tidak berdistribusi secara normal atau nilai mean lebih besar dibanding mediannya
 3. Tidak terdapat perbedaan distribusi data yang signifikan pada feature sex, age dan education
