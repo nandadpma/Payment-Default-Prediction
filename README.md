@@ -4,29 +4,26 @@ Dataset : https://www.kaggle.com/datasets/reverie5/av-janata-hack-payment-defaul
 
 ## Bussiness Understanding
 
-**Apa problem yang mau diselesaikan dari dataset**
-> Kemungkinan nasabah yang gagal bayar pada pembayaran bulan berikutnya
+**Background**
+> Bank Janata Taiwan pada tahun 2005 memiliki problem dimana sebanyak 22,12 % dari keseluruhan customernya default payment. Hal ini tentu dapat menurunkan revenue Bank Janata jika tidak ditangani dengan baik.
 
 **Sebagai siapa kalian pada dataset tersebut?**
-> Sebagai Data Scientist pada bagian Credit Analyst
+> Kamis sebagai Data Scientist pada divisi Credit Analyst akan membantu Team Bisnis untuk memberikan solusi terhadap masalah yang dihadapi Bank Janata
 
-**Apa goal yang mau dicapai?**
-> Menurunkan ...
+**Goals**
+> Menurunkan Default Rate
 
-**Apa Objective yang sesuai dengan goal tsb?**
+> Meningkatkan Revenue
+
+> Menurunkan Kerugian Bank
+
+**Objective**
 > Memprediksi user mana saja yang akan default, kemudian memberikan **Treatment** khusus pada user tersebut sehingga diharapkan agar tidak default pada bulan tersebut
 
-**Apa business metrics yang cocok untuk mengukur ketercapaian Objective tsb?**
-> ...
+**Business Metrics**
+> Default Rate
 
-## Latar Belakang
-1.  Sebuah bank memiliki angka default rate sebesar 22%  untuk nasabah kartu kredit gagal bayar pada pembayaran bulan berikutnya.
-2.  Kegagalan bayar menyebabkan menurunnya keuntungan bank, dan bank harus mengeluarkan cost extra untuk melakukan penagihan kepada user yang terprediksi default
-3.  Kami ingin membuat model yang handal dalam memprediksi user mana yang akan gagal bayar pada pembayaran bulan berikutnya, sehingga akan dilakukan **Treatment** khusus pada user-user tersebut
-4.  Goals dari Model kami yaitu: 
-- meminimalkan cost yang terbuang percuma dengan cara menurunkan metrics **Precision**
-- memaksimalkan penggunaan cost sehingga pemberian **Treatment** lebih tepat sasaran kepada user yang "membutuhkan" dengan cara menurunkan metrics **Recall**
-5.  Goals dari Bussiness kami adalah ...
+
 
 ## Hasil Pengamatan EDA
 1. Terdapat outlier pada semua kolom bill amt dan pay amt dan datanya memiliki kerapatan yang cukup rapat
@@ -48,7 +45,7 @@ Dataset : https://www.kaggle.com/datasets/reverie5/av-janata-hack-payment-defaul
 4. Melakukan feature encoding pada beberapa data kategorikal (Age Group,Membership)
 
 * Modeling
-1. Split data Train dan Test dengan ratio 70:30 (16800:4200)
+1. Split data Train dan Test dengan ratio 70:30 (14900:6100)
 2. Metric utama yang akan digunakan dalam model ini adalah precision
 3. Deploy data yang telah di pre-processing dengan menggunakan beberapa model (Decision tree, kNN, Logistic Regression, Random Forest, XGboost, AdaBoost)
 4. Berdasarkan hasil perbandingan tiap model, Model AdaBoost dan Random Forest memiliki nilai precision yang tinggi dibandingkan model lain
