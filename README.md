@@ -8,7 +8,7 @@ Dataset : [JANATA BANK Payment Default Prediction](https://www.kaggle.com/datase
 > Bank Janata Taiwan pada tahun 2005 memiliki problem dimana sebanyak 22,12 % dari keseluruhan customernya default payment. Hal ini tentu dapat menurunkan revenue Bank Janata jika tidak ditangani dengan baik.
 
 **Sebagai siapa kalian pada dataset tersebut?**
-> Kamis sebagai Data Scientist pada divisi Credit Analyst akan membantu Team Bisnis untuk memberikan solusi terhadap masalah yang dihadapi Bank Janata
+> Kami sebagai Data Scientist pada divisi Credit Analyst akan membantu Team Bisnis untuk memberikan solusi terhadap masalah yang dihadapi Bank Janata
 
 **Goals**
 > Menurunkan Default Rate
@@ -23,13 +23,9 @@ Dataset : [JANATA BANK Payment Default Prediction](https://www.kaggle.com/datase
 **Business Metrics**
 > Default Rate
 
+> Revenue
 
-
-## Hasil Pengamatan EDA
-1. Terdapat outlier pada semua kolom bill amt dan pay amt dan datanya memiliki kerapatan yang cukup rapat
-2. Distribusi data tidak berdistribusi secara normal atau nilai mean lebih besar dibanding mediannya
-3. Tidak terdapat perbedaan distribusi data yang signifikan pada feature sex, age dan education
-4. Perbandingan data antara kelas Default dan tidak default cukup timpang yaitu 22:78 persen
+> Loss
 
 *Bussiness Insight yang didapat
 1. Pengguna Credit Card terbanyak didominasi oleh wanita namun nasabah yang default didominasi oleh pria
@@ -42,13 +38,13 @@ Dataset : [JANATA BANK Payment Default Prediction](https://www.kaggle.com/datase
 1. Tidak ditemukan data yang null
 2. Tidak ditemukan data yang duplicate
 3. Membuat Feature baru untuk memperkuat prediksi model yang akan dibuat (Age Group, Membership, Minimum Amount (1-5), Pending amount(1-5)
-4. Melakukan feature encoding pada beberapa data kategorikal (Age Group,Membership)
+4. Melakukan feature encoding pada beberapa data kategorikal (Age_Group, Limit_Segment)
 
 * Modeling
 1. Split data Train dan Test dengan ratio 70:30 (14900:6100)
-2. Metric utama yang akan digunakan dalam model ini adalah precision
-3. Deploy data yang telah di pre-processing dengan menggunakan beberapa model (Decision tree, kNN, Logistic Regression, Random Forest, XGboost, AdaBoost)
-4. Berdasarkan hasil perbandingan tiap model, Model AdaBoost dan Random Forest memiliki nilai precision yang tinggi dibandingkan model lain
+2. Metric utama yang akan digunakan dalam mengevaluasi performa model adalah precision
+3. Menerapkan beberapa algoritma seperti Decision Tree, kNN, Logistic Regression, Random Forest, XGboost, AdaBoostpada untuk membuat model yang kemudian akan dibandingkan performanya
+4. Berdasarkan hasil perbandingan tiap model, Model AdaBoost dan Random Forest memiliki nilai precision yang tinggi dibandingkan model lain.
 
 
 
